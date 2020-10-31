@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans Condensed', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+p{
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color:#fff;
+    opacity:0.8;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    padding:10px 20px;
+}
+
+/* navbar top */
+.navbar.top {
+    background:transparent;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#logo p {
+    margin-left: 40px;
+    margin-top: -2px;
+}
+
+.navbar a {
+    color:#fff;
+    padding:10px 20px;
+    margin:0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: #28a745 2px solid;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+/* header */
+
+.hero {
+    background: url(../image_resources/home/showcase.jpg)no-repeat center center/cover;
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.hero .content h1{
+    font-size: 55px;
+}
+
+.hero .content p {
+    font-size: 23px;
+    max-width: 600px;
+    margin: 20px 0 30px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    height: 100%;
+    width: 100%;
+}
+
+.hero * {
+    z-index: 10;
+}
+
+/* direct styling for the icon class */
+.container {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.container .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 25%;
+    padding-bottom: 20px;
+}
+
+.cases img:hover {
+    opacity: 0.7;
+}
+
+.carousel-container {
+    position: relative;
+    width: 60%;
+    margin : auto;
+    overflow: hidden;
+
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 340px;
+}
+
+button {
+    display: none;
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: rgb(163, 162, 162);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: rgb(165, 164, 164);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.detailed-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 40px;
+}
+
+.detailed-menu a {
+    color: #fff;
+background-color: rgb(45, 182, 67);
+border-radius: 5px;
+margin: 10px;
+display: flex;
+flex-direction: column;
+padding: 10px;
+}
+
+.location h2{
+font-size: 2rem
+}
+
+.location p {
+    font-size: 22px;
+}
+
+.location-header {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.location-photos {
+    margin: 40px 40px;
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+}
+
+footer a {
+    color: #fff;
+    background-color: #333;
+    margin: 10px;
+}
+
+footer .link {
+    margin: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .navbar a{
+      margin: 5px 20px;
+      padding: 10px; 
+    }
+
+    .flex-items {
+        flex-direction: column;
+    }
+
+    .flex-grid .column,
+    .flex-columns .column {
+        flex : 100%;
+        min-width: 100%;
+    }
+
+    #section .column {
+        flex-direction: column;
+    }
+
+    .cases img {
+        width: 100%;
+    }
+
+    .location .location-header {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .link {
+        padding: 10px 0;
+        flex-direction: row;
+    }
+}
